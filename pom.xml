@@ -241,7 +241,7 @@
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>4.3.0</version>
                 <configuration>
-                    <repoToken>${testatoo_coveralls_token}</repoToken>
+                    <repoToken>${testatoo_html5_bundle_coveralls_token}</repoToken>
                 </configuration>
             </plugin>
         </plugins>
