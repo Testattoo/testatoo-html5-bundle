@@ -22,7 +22,7 @@
 
     <groupId>org.org.testatoo</groupId>
     <artifactId>org.testatoo-html5-bundle</artifactId>
-    <version>1.0.b0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Testatoo</name>
