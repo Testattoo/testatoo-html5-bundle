@@ -48,7 +48,6 @@ class WebDriverConfig extends ExternalResource {
 
         BASE_URL = 'http://localhost:8080/'
 
-
         startJetty()
 
         switch (browser) {
