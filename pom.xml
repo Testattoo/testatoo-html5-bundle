@@ -20,21 +20,21 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.org.testatoo</groupId>
-    <artifactId>org.testatoo-html5-bundle</artifactId>
-    <version>1.0.b0-SNAPSHOT</version>
+    <groupId>org.testatoo</groupId>
+    <artifactId>testatoo-html5-bundle</artifactId>
+    <version>1.0.b1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Testatoo</name>
+    <name>Testatoo html5 bundle</name>
     <inceptionYear>2018</inceptionYear>
 
     <description>The HTML5 bundle for Testatoo</description>
     <url>http://www.org.testatoo.org</url>
 
     <scm>
-        <connection>scm:git:git@github.com:Ovea/org.testatoo-html5-bundle.git</connection>
-        <developerConnection>scm:git:git@github.com:Ovea/org.testatoo-html5-bundle.git</developerConnection>
-        <url>http://github.com/Ovea/org.testatoo-html5-bundle</url>
+        <connection>scm:git:git@github.com:Ovea/testatoo-html5-bundle.git</connection>
+        <developerConnection>scm:git:git@github.com:Ovea/testatoo-html5-bundle.git</developerConnection>
+        <url>http://github.com/Ovea/testatoo-html5-bundle</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -163,6 +163,7 @@
                     <excludes>
                         <exclude>**/README</exclude>
                         <exclude>**/LICENCE</exclude>
+                        <exclude>**/*.yml</exclude>
                         <exclude>src/test/webapp/js/**</exclude>
                         <exclude>src/test/webapp/css/**</exclude>
                         <exclude>src/test/webapp/fonts/**</exclude>
