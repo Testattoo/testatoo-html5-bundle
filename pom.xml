@@ -20,7 +20,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.org.testatoo</groupId>
+    <groupId>org.testatoo</groupId>
     <artifactId>testatoo-html5-bundle</artifactId>
     <version>1.0.b1-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -163,6 +163,7 @@
                     <excludes>
                         <exclude>**/README</exclude>
                         <exclude>**/LICENCE</exclude>
+                        <exclude>**/*.yml</exclude>
                         <exclude>src/test/webapp/js/**</exclude>
                         <exclude>src/test/webapp/css/**</exclude>
                         <exclude>src/test/webapp/fonts/**</exclude>
