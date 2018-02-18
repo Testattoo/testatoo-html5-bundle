@@ -1,0 +1,62 @@
+= Testatoo Html5 Bundle
+
+image:https://circleci.com/gh/Ovea/testatoo-html5-bundle/tree/master.svg?style=svg["CircleCI", link="https://circleci.com/gh/Ovea/testatoo-html5-bundle/tree/master"]
+image:https://badges.gitter.im/Join%20Chat.svg[link="https://gitter.im/Ovea/testatoo-html5-bundle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"]
+https://coveralls.io/github/Ovea/testatoo-html5-bundle?branch=master[image:https://coveralls.io/repos/Ovea/testatoo-html5-bundle/badge.svg?branch=master&service=github[CoverageStatus]]
+
+[.left.text-left]
+image::logo.svg[]
+
+== Downloading
+
+Latest Testatoo version is available on {download-url}[Maven Central]
+
+    <dependency>
+      <groupId>org.testatoo</groupId>
+      <artifactId>testatoo-html5-bundle</artifactId>
+      <version>1.0.b1</version>
+      <scope>test</scope>
+    </dependency>
+
+== Building
+
+=== Prerequisites
+
+==== Java 1.8+
+
+You need version **1.8** and more of the Java JDK installed
+
+    $ java -version
+    java version "1.8.0_151"
+    ...
+    
+==== Maven
+
+Follow the instructions http://maven.apache.org/download.cgi#Installation["Maven Installation Instructions"]
+
+    $ mvn --version  
+    Apache Maven 3.5.0
+    ...
+
+=== Installation Steps
+
+    $ git clone https://github.com/Ovea/testatoo-html5-bundle
+    $ cd testatoo
+
+=== Install browsers
+
+    - Install Firefox
+    - Install Chrome
+    - Install Edge / Safari
+
+If you don't want to install Browser and driver you can use docker images
+
+    - docker run -d -p 4444:4444 selenium/standalone-firefox
+    or
+    - docker run -d -p 4444:4444 selenium/standalone-chrome
+
+In your Terminal
+
+    $ mvn clean install  // Test on Chrome by default
+    // With docker container usage
+    $ mvn clean install -Dremote -Pfirefox
