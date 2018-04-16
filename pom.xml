@@ -31,9 +31,9 @@
     <url>http://www.org.testatoo.org</url>
 
     <scm>
-        <connection>scm:git:git@github.com:Ovea/testatoo-html5-bundle.git</connection>
-        <developerConnection>scm:git:git@github.com:Ovea/testatoo-html5-bundle.git</developerConnection>
-        <url>http://github.com/Ovea/testatoo-html5-bundle</url>
+        <connection>scm:git:git@github.com:Testatoo/testatoo-html5-bundle.git</connection>
+        <developerConnection>scm:git:git@github.com:Testatoo/testatoo-html5-bundle.git</developerConnection>
+        <url>http://github.com/Testatoo/testatoo-html5-bundle</url>
         <tag>HEAD</tag>
     </scm>
 
