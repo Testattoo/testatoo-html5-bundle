@@ -17,7 +17,6 @@ package org.testatoo.bundle.html5.input
 
 import org.junit.BeforeClass
 import org.junit.ClassRule
-import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
@@ -93,6 +92,9 @@ class InputFieldTest {
 
         password.value('My Password')
         password.should { have value('My Password') }
+
+        password.clear()
+        password.should { have value('') }
     }
 
     @Test
