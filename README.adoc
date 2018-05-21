@@ -1,8 +1,8 @@
 = Testatoo Html5 Bundle
 
-image:https://circleci.com/gh/Ovea/testatoo-html5-bundle/tree/master.svg?style=svg["CircleCI", link="https://circleci.com/gh/Ovea/testatoo-html5-bundle/tree/master"]
+image:https://circleci.com/gh/Testatoo/testatoo-html5-bundle/tree/master.svg?style=svg["CircleCI", link="https://circleci.com/gh/Testatoo/testatoo-html5-bundle/tree/master"]
 image:https://badges.gitter.im/Join%20Chat.svg[link="https://gitter.im/Ovea/testatoo-html5-bundle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"]
-https://coveralls.io/github/Ovea/testatoo-html5-bundle?branch=master[image:https://coveralls.io/repos/Ovea/testatoo-html5-bundle/badge.svg?branch=master&service=github[CoverageStatus]]
+https://coveralls.io/github/Testatoo/testatoo-html5-bundle?branch=master[image:https://coveralls.io/repos/Testatoo/testatoo-html5-bundle/badge.svg?branch=master&service=github[CoverageStatus]]
 
 [.left.text-left]
 image::logo.svg[]
