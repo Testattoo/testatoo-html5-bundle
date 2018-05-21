@@ -28,7 +28,7 @@ class Th extends Column {
     @Override
     List<Td> cells() {
         int index = config.evaluator.eval(id(), "it.index() + 1") as int
-        find(By.js("\$('#${id()}').closest('table').find('tbody tr').find('td:nth-child(${index})')"), Td)
+        find(By.js("\$('[id=\"${id()}\"]').closest('table').find('tbody tr').find('td:nth-child(${index})')"), Td)
     }
 
     @Override

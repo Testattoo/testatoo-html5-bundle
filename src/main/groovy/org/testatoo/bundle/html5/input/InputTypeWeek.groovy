@@ -26,6 +26,6 @@ import static org.testatoo.core.Testatoo.config
 class InputTypeWeek extends WeekField implements Input {
     @Override
     void value(Object value) {
-        config.evaluator.runScript("\$('#${id()}').val('" + value + "')")
+        config.evaluator.runScript("\$('[id=\"${id()}\"]').val('" + value + "')")
     }
 }

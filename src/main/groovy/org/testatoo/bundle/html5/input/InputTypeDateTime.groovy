@@ -27,6 +27,6 @@ import static org.testatoo.core.Testatoo.config
 class InputTypeDateTime extends DateTimeField implements Input {
     @Override
     void value(Object value) {
-        config.evaluator.runScript("\$('#${id()}').val('" + value + "')")
+        config.evaluator.runScript("\$('[id=\"${id()}\"]').val('" + value + "')")
     }
 }

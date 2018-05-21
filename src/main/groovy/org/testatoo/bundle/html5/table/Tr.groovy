@@ -26,7 +26,7 @@ import static org.testatoo.core.Testatoo.config
 class Tr extends Row {
     @Override
     List<Td> cells() {
-        config.evaluator.metaInfo("\$('#${id()}').find('td')").collect { it as Td }
+        config.evaluator.metaInfo("\$('[id=\"${id()}\"]').find('td')").collect { it as Td }
     }
 
     @Override

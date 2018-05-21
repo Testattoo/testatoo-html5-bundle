@@ -47,7 +47,8 @@ trait Input {
         if (!this.enabled()) {
             throw new ComponentException("${this.class.simpleName} ${this} is disabled and cannot be filled")
         }
-        clear()
+        this.click()
+        config.evaluator.runScript("\$('[id=\"${id()}\"]').val('')")
         config.evaluator.type([String.valueOf(value)])
     }
 
@@ -57,7 +58,7 @@ trait Input {
 
     void clear() {
         this.click()
-        config.evaluator.runScript("\$('#${id()}').val('').change()")
+        config.evaluator.runScript("\$('[id=\"${id()}\"]').val('').change()")
     }
 
     Object value() {
