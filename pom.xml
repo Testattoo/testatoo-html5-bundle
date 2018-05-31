@@ -41,7 +41,7 @@
         <jdk.version>1.7</jdk.version>
         <groovy.version>2.4.13</groovy.version>
         <selenium.version>3.9.1</selenium.version>
-        <testatoo.version>2.0.b28</testatoo.version>
+        <testatoo.version>2.0.b32</testatoo.version>
         <jetty.daemon>true</jetty.daemon>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
