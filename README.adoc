@@ -1,6 +1,6 @@
 = Testatoo Html5 Bundle
 
-image:https://img.shields.io/circleci/project/github/Testatoo/testatoo-html5-bundle/master.svg[CircleCI branch]
+image:https://img.shields.io/circleci/project/github/Testatoo/testatoo-html5-bundle.svg?style=flat-square["CircleCI",link="https://circleci.com/gh/Testatoo/testatoo-html5-bundle"]
 image:https://badges.gitter.im/Join%20Chat.svg[link="https://gitter.im/Ovea/testatoo-html5-bundle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"]
 https://coveralls.io/github/Testatoo/testatoo-html5-bundle?branch=master[image:https://coveralls.io/repos/Testatoo/testatoo-html5-bundle/badge.svg?branch=master&service=github[CoverageStatus]]
 image:https://img.shields.io/maven-central/v/org.testatoo/testatoo-html5-bundle.svg[Maven Central]
