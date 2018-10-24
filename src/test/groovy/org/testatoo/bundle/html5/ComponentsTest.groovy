@@ -50,7 +50,7 @@ class ComponentsTest {
 
     @Test
     void component_should_have_expected_common_behaviours() {
-        assert Button in Button
+        assert Button in org.testatoo.core.component.Button
 
         Button button = $('#button') as Button
 
@@ -88,7 +88,7 @@ class ComponentsTest {
 
     @Test
     void button_should_have_expected_behaviours() {
-        assert Button in Button
+        assert Button in org.testatoo.core.component.Button
 
         // fields type=button
         Button button = $('#button') as Button
@@ -167,7 +167,7 @@ class ComponentsTest {
 
     @Test
     void form_should_have_expected_behaviours() {
-        assert Form in Form
+        assert Form in org.testatoo.core.component.Form
 
         Form form = $('#form') as Form
         InputTypeEmail email = $('#form [type=email]') as InputTypeEmail
@@ -317,6 +317,15 @@ class ComponentsTest {
         Span span = $('#span') as Span
 
         assert span.text() == 'A span'
+    }
+
+    @Test
+    void label_should_have_expected_behaviours() {
+        assert Label in org.testatoo.core.component.Label
+
+        Label label = $('[for=password_field]') as Label
+
+        assert label.text() == 'Password'
     }
 
     @Test
