@@ -20,13 +20,14 @@ import org.junit.ClassRule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import org.testatoo.WebDriverConfig
 import org.testatoo.core.component.datagrid.Cell
 import org.testatoo.core.component.datagrid.Column
 import org.testatoo.core.component.datagrid.DataGrid
-import org.testatoo.WebDriverConfig
 
-import static org.testatoo.core.Testatoo.*
-import static org.testatoo.WebDriverConfig.*
+import static org.testatoo.WebDriverConfig.BASE_URL
+import static org.testatoo.core.Testatoo.$
+import static org.testatoo.core.Testatoo.visit
 
 /**
  * @author David Avenante (d.avenante@gmail.com)

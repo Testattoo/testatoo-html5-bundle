@@ -19,6 +19,7 @@ import org.testatoo.core.By
 import org.testatoo.core.ComponentException
 import org.testatoo.core.CssIdentifier
 import org.testatoo.core.component.Component
+
 import static org.testatoo.core.Testatoo.config
 
 /**

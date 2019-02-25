@@ -15,9 +15,7 @@
  */
 package org.testatoo
 
-import io.github.bonigarcia.wdm.ChromeDriverManager
-import io.github.bonigarcia.wdm.EdgeDriverManager
-import io.github.bonigarcia.wdm.FirefoxDriverManager
+
 import io.github.bonigarcia.wdm.WebDriverManager
 import org.eclipse.jetty.server.Server
 import org.eclipse.jetty.server.handler.DefaultHandler

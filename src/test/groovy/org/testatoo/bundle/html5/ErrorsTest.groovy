@@ -20,20 +20,19 @@ import org.junit.ClassRule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import org.testatoo.WebDriverConfig
 import org.testatoo.bundle.html5.input.InputTypeCheckBox
 import org.testatoo.bundle.html5.input.InputTypeNumber
 import org.testatoo.bundle.html5.input.InputTypePassword
 import org.testatoo.core.ComponentException
-import org.testatoo.core.Testatoo
 import org.testatoo.core.component.field.NumberField
 import org.testatoo.core.component.field.PasswordField
 import org.testatoo.core.input.Key
 import org.testatoo.core.input.MouseModifiers
-import org.testatoo.WebDriverConfig
 
 import static org.junit.Assert.fail
-import static org.testatoo.core.Testatoo.*
 import static org.testatoo.WebDriverConfig.BASE_URL
+import static org.testatoo.core.Testatoo.*
 
 /**
  * @author David Avenante (d.avenante@gmail.com)

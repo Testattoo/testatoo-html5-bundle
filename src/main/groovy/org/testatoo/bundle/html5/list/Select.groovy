@@ -52,7 +52,7 @@ class Select extends Dropdown {
 
     @Override
     String label() {
-       LabelHelper.label(this)
+        LabelHelper.label(this)
     }
 
     @Override

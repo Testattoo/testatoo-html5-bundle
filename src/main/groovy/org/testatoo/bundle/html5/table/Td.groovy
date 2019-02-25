@@ -17,6 +17,7 @@ package org.testatoo.bundle.html5.table
 
 import org.testatoo.core.CssIdentifier
 import org.testatoo.core.component.datagrid.Cell
+
 import static org.testatoo.core.Testatoo.config
 
 /**

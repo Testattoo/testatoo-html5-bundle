@@ -20,6 +20,10 @@ import org.junit.ClassRule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import org.testatoo.WebDriverConfig
+import org.testatoo.bundle.html5.Button
+import org.testatoo.bundle.html5.Form
+import org.testatoo.bundle.html5.Label
 import org.testatoo.bundle.html5.heading.*
 import org.testatoo.bundle.html5.input.InputTypeCheckBox
 import org.testatoo.bundle.html5.input.InputTypeEmail
@@ -29,11 +33,10 @@ import org.testatoo.core.ComponentException
 import org.testatoo.core.CssIdentifier
 import org.testatoo.core.component.*
 import org.testatoo.core.support.property.TextSupport
-import org.testatoo.WebDriverConfig
 
 import static org.junit.Assert.fail
+import static org.testatoo.WebDriverConfig.BASE_URL
 import static org.testatoo.core.Testatoo.*
-import static org.testatoo.WebDriverConfig.*
 
 /**
  * @author David Avenante (d.avenante@gmail.com)

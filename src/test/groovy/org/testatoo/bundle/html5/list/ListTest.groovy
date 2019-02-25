@@ -20,13 +20,14 @@ import org.junit.ClassRule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import org.testatoo.WebDriverConfig
 import org.testatoo.core.ComponentException
 import org.testatoo.core.component.ListView
-import org.testatoo.WebDriverConfig
 
 import static org.junit.Assert.fail
-import static org.testatoo.core.Testatoo.*
-import static org.testatoo.WebDriverConfig.*
+import static org.testatoo.WebDriverConfig.BASE_URL
+import static org.testatoo.core.Testatoo.$
+import static org.testatoo.core.Testatoo.visit
 
 /**
  * @author David Avenante (d.avenante@gmail.com)
@@ -34,7 +35,7 @@ import static org.testatoo.WebDriverConfig.*
 @RunWith(JUnit4)
 class ListTest {
     @ClassRule
-    public static WebDriverConfig driver =  new WebDriverConfig()
+    public static WebDriverConfig driver = new WebDriverConfig()
 
     @BeforeClass
     static void before() {
@@ -61,7 +62,7 @@ class ListTest {
         Ol ol = $('#empty_ordered_list') as Ol
         assert ol.empty()
 
-         ol = $('#ordered_list') as Ol
+        ol = $('#ordered_list') as Ol
 
         assert ol.items().size() == 5
         assert ol.items()[0].value() == 'Item 11'

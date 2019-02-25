@@ -17,6 +17,7 @@ package org.testatoo.bundle.html5.input
 
 import org.testatoo.core.CssIdentifier
 import org.testatoo.core.component.field.WeekField
+
 import static org.testatoo.core.Testatoo.config
 
 /**
