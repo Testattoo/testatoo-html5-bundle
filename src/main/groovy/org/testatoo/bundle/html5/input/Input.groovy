@@ -15,9 +15,14 @@
  */
 package org.testatoo.bundle.html5.input
 
+
 import org.testatoo.bundle.html5.helper.LabelHelper
 import org.testatoo.core.ComponentException
+
 import static org.testatoo.core.Testatoo.config
+import static org.testatoo.core.Testatoo.type
+import static org.testatoo.core.input.Key.BACK_SPACE
+import static org.testatoo.core.input.Key.CTRL
 
 /**
  * @author David Avenante (d.avenante@gmail.com)
@@ -49,7 +54,7 @@ trait Input {
         }
         this.click()
         config.evaluator.runScript("\$('[id=\"${id()}\"]').val('')")
-        config.evaluator.type([String.valueOf(value)])
+        type([String.valueOf(value)])
     }
 
     String label() {
@@ -58,7 +63,8 @@ trait Input {
 
     void clear() {
         this.click()
-        config.evaluator.runScript("\$('[id=\"${id()}\"]').val('').change()")
+        type(CTRL + 'a')
+        type(BACK_SPACE)
     }
 
     Object value() {
