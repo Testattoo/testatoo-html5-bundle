@@ -256,6 +256,13 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>${groovy.version}</version>
+            <scope>provided</scope>
+            <type>pom</type>
+        </dependency>
+        <dependency>
             <groupId>org.testatoo</groupId>
             <artifactId>testatoo</artifactId>
             <version>${testatoo.version}</version>
