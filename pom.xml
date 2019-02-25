@@ -21,7 +21,7 @@
 
     <groupId>org.testatoo</groupId>
     <artifactId>testatoo-html5-bundle</artifactId>
-    <version>1.0.b3-SNAPSHOT</version>
+    <version>1.0.b4-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Testatoo html5 bundle</name>
@@ -40,18 +40,18 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.6</jdk.version>
-        <groovy.version>2.4.13</groovy.version>
+        <groovy.version>2.5.6</groovy.version>
 
         <selenium.version>3.9.1</selenium.version>
-        <testatoo.version>2.0.b33</testatoo.version>
+        <testatoo.version>2.0.b34</testatoo.version>
         <junit.version>4.12</junit.version>
-        <webdrivermanager.version>2.0.1</webdrivermanager.version>
+        <webdrivermanager.version>3.1.1</webdrivermanager.version>
         <jetty.version>9.4.12.v20180830</jetty.version>
         <jetty.daemon>true</jetty.daemon>
 
         <!-- Plugins -->
-        <gmavenplus-plugin.version>1.6</gmavenplus-plugin.version>
-        <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
+        <gmavenplus-plugin.version>1.6.2</gmavenplus-plugin.version>
+        <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
         <license-maven-plugin.version>3.0</license-maven-plugin.version>
@@ -59,7 +59,6 @@
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
         <jacoco-maven-plugin.version>0.8.0</jacoco-maven-plugin.version>
-        <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
     </properties>
 
     <licenses>
@@ -130,6 +129,7 @@
                         <groupId>org.codehaus.groovy</groupId>
                         <artifactId>groovy-all</artifactId>
                         <version>${groovy.version}</version>
+                        <type>pom</type>
                     </dependency>
                 </dependencies>
             </plugin>
@@ -176,9 +176,13 @@
                         <email>d.avenante@gmail.com</email>
                     </properties>
                     <excludes>
+                        <exclude>mvnw</exclude>
+                        <exclude>mvnw.cmd</exclude>
+                        <exclude>.editorconfig</exclude>
                         <exclude>**/README</exclude>
                         <exclude>**/LICENCE</exclude>
                         <exclude>**/*.yml</exclude>
+                        <exclude>.mvn/**</exclude>
                         <exclude>src/test/webapp/js/**</exclude>
                         <exclude>src/test/webapp/css/**</exclude>
                         <exclude>src/test/webapp/fonts/**</exclude>
@@ -245,20 +249,18 @@
                 <version>${jacoco-maven-plugin.version}</version>
                 <executions>
                     <execution>
-                        <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.eluder.coveralls</groupId>
-                <artifactId>coveralls-maven-plugin</artifactId>
-                <version>${coveralls-maven-plugin.version}</version>
-                <configuration>
-                    <repoToken>${testatoo_html5_bundle_coveralls_token}</repoToken>
-                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -285,12 +287,6 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
-            <version>${jetty.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-util</artifactId>
             <version>${jetty.version}</version>
             <scope>test</scope>
         </dependency>

@@ -18,6 +18,7 @@ package org.testatoo
 import io.github.bonigarcia.wdm.ChromeDriverManager
 import io.github.bonigarcia.wdm.EdgeDriverManager
 import io.github.bonigarcia.wdm.FirefoxDriverManager
+import io.github.bonigarcia.wdm.WebDriverManager
 import org.eclipse.jetty.server.Server
 import org.eclipse.jetty.server.handler.DefaultHandler
 import org.eclipse.jetty.server.handler.HandlerList
@@ -58,7 +59,7 @@ class WebDriverConfig extends ExternalResource {
                     WebDriver driver = new RemoteWebDriver(new URL('http://localhost:4444/wd/hub'), new FirefoxOptions())
                     config.evaluator = new WebDriverEvaluator(driver)
                 } else {
-                    FirefoxDriverManager.instance.setup()
+                    WebDriverManager.firefoxdriver().setup()
                     config.evaluator = new WebDriverEvaluator(new FirefoxDriver())
                 }
                 break
@@ -68,13 +69,13 @@ class WebDriverConfig extends ExternalResource {
                     WebDriver driver = new RemoteWebDriver(new URL('http://localhost:4444/wd/hub'), new ChromeOptions())
                     config.evaluator = new WebDriverEvaluator(driver)
                 } else {
-                    ChromeDriverManager.instance.setup()
+                    WebDriverManager.chromedriver().setup()
                     config.evaluator = new WebDriverEvaluator(new ChromeDriver())
                 }
                 break
             case 'Edge':
                 println '==================== Edge Profile ===================='
-                EdgeDriverManager.instance.setup()
+                WebDriverManager.edgedriver().setup()
                 config.evaluator = new WebDriverEvaluator(new EdgeDriver())
                 break
         }
