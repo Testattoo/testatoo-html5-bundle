@@ -21,7 +21,7 @@
 
     <groupId>org.testatoo</groupId>
     <artifactId>testatoo-html5-bundle</artifactId>
-    <version>1.0.b4-SNAPSHOT</version>
+    <version>1.0.b4</version>
     <packaging>jar</packaging>
 
     <name>Testatoo html5 bundle</name>
@@ -34,15 +34,15 @@
         <connection>scm:git:git@github.com:Testatoo/testatoo-html5-bundle.git</connection>
         <developerConnection>scm:git:git@github.com:Testatoo/testatoo-html5-bundle.git</developerConnection>
         <url>http://github.com/Testatoo/testatoo-html5-bundle</url>
-        <tag>HEAD</tag>
+        <tag>1.0.b4</tag>
     </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jdk.version>1.6</jdk.version>
+        <jdk.version>1.8</jdk.version>
         <groovy.version>2.5.6</groovy.version>
 
-        <selenium.version>3.9.1</selenium.version>
+        <selenium.version>3.141.59</selenium.version>
         <testatoo.version>2.0.b34</testatoo.version>
         <junit.version>4.12</junit.version>
         <webdrivermanager.version>3.1.1</webdrivermanager.version>
@@ -51,14 +51,12 @@
 
         <!-- Plugins -->
         <gmavenplus-plugin.version>1.6.2</gmavenplus-plugin.version>
-        <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
-        <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
         <license-maven-plugin.version>3.0</license-maven-plugin.version>
         <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
-        <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
-        <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
-        <jacoco-maven-plugin.version>0.8.0</jacoco-maven-plugin.version>
+        <maven-javadoc-plugin.version>3.0.1</maven-javadoc-plugin.version>
+        <jacoco-maven-plugin.version>0.8.2</jacoco-maven-plugin.version>
+        <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
     </properties>
 
     <licenses>
@@ -97,6 +95,11 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+            </plugin>
+            <plugin>
                 <groupId>org.codehaus.gmavenplus</groupId>
                 <artifactId>gmavenplus-plugin</artifactId>
                 <version>${gmavenplus-plugin.version}</version>
@@ -132,11 +135,6 @@
                         <type>pom</type>
                     </dependency>
                 </dependencies>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven-surefire-plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -213,19 +211,6 @@
                                 <source>${project.build.directory}/generated-sources/groovy</source>
                             </sources>
                         </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>${maven-source-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
                     </execution>
                 </executions>
             </plugin>
