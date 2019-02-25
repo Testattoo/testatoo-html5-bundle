@@ -21,7 +21,7 @@
 
   <groupId>org.testatoo</groupId>
   <artifactId>testatoo-html5-bundle</artifactId>
-  <version>1.0.b4</version>
+  <version>1.0.b5-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>Testatoo html5 bundle</name>
