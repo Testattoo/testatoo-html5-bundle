@@ -21,7 +21,7 @@
 
   <groupId>org.testatoo</groupId>
   <artifactId>testatoo-html5-bundle</artifactId>
-  <version>1.0.b5-SNAPSHOT</version>
+  <version>1.0.b4-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>Testatoo html5 bundle</name>
@@ -34,15 +34,17 @@
     <connection>scm:git:git@github.com:Testatoo/testatoo-html5-bundle.git</connection>
     <developerConnection>scm:git:git@github.com:Testatoo/testatoo-html5-bundle.git</developerConnection>
     <url>http://github.com/Testatoo/testatoo-html5-bundle</url>
-    <tag>1.0.b4</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jdk.version>1.6</jdk.version>
+    <jdk.version>1.8</jdk.version>
     <groovy.version>2.5.6</groovy.version>
 
     <testatoo.version>2.0.b34</testatoo.version>
+
+    <!-- Tests -->
     <junit.version>4.12</junit.version>
     <webdrivermanager.version>3.1.1</webdrivermanager.version>
     <jetty.version>9.4.12.v20180830</jetty.version>
@@ -50,14 +52,12 @@
 
     <!-- Plugins -->
     <gmavenplus-plugin.version>1.6.2</gmavenplus-plugin.version>
-    <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
-    <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
     <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
     <license-maven-plugin.version>3.0</license-maven-plugin.version>
     <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
-    <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
-    <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
-    <jacoco-maven-plugin.version>0.8.0</jacoco-maven-plugin.version>
+    <maven-javadoc-plugin.version>3.0.1</maven-javadoc-plugin.version>
+    <jacoco-maven-plugin.version>0.8.2</jacoco-maven-plugin.version>
+    <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
   </properties>
 
   <licenses>
@@ -104,6 +104,10 @@
         <groupId>org.codehaus.gmavenplus</groupId>
         <artifactId>gmavenplus-plugin</artifactId>
         <version>${gmavenplus-plugin.version}</version>
+        <configuration>
+          <verbose>true</verbose>
+          <invokeDynamic>false</invokeDynamic>
+        </configuration>
         <executions>
           <execution>
             <goals>
@@ -113,13 +117,22 @@
               <goal>compileTests</goal>
             </goals>
           </execution>
+          <execution>
+            <id>generate-doc</id>
+            <phase>package</phase>
+            <goals>
+              <goal>groovydoc</goal>
+            </goals>
+            <configuration>
+              <groovyDocOutputDirectory>${project.build.directory}/apidocs</groovyDocOutputDirectory>
+            </configuration>
+          </execution>
         </executions>
         <dependencies>
           <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
             <version>${groovy.version}</version>
-            <scope>runtime</scope>
             <type>pom</type>
           </dependency>
         </dependencies>
@@ -241,6 +254,13 @@
   </build>
 
   <dependencies>
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+      <version>${groovy.version}</version>
+      <optional>true</optional>
+      <type>pom</type>
+    </dependency>
     <dependency>
       <groupId>org.testatoo</groupId>
       <artifactId>testatoo</artifactId>
