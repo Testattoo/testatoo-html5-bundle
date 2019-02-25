@@ -16,6 +16,7 @@
 package org.testatoo.bundle.html5.helper
 
 import org.testatoo.core.component.Component
+
 import static org.testatoo.core.Testatoo.config
 
 /**
@@ -40,6 +41,6 @@ class RangeHelper {
 
     static boolean inRange(Component c) {
         !(config.evaluator.check(c.id(), "it[0].validity.rangeUnderflow") ||
-                config.evaluator.check(c.id(), "it[0].validity.rangeOverflow"))
+            config.evaluator.check(c.id(), "it[0].validity.rangeOverflow"))
     }
 }

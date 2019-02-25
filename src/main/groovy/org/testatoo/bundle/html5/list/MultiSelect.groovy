@@ -19,6 +19,7 @@ import org.testatoo.bundle.html5.helper.LabelHelper
 import org.testatoo.core.By
 import org.testatoo.core.CssIdentifier
 import org.testatoo.core.component.ListBox
+
 import static org.testatoo.core.Testatoo.config
 
 /**

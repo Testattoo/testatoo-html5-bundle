@@ -20,12 +20,12 @@ import org.junit.ClassRule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import org.testatoo.WebDriverConfig
 import org.testatoo.core.component.Dropdown
 import org.testatoo.core.component.Group
-import org.testatoo.WebDriverConfig
 
-import static org.testatoo.core.Testatoo.*
 import static org.testatoo.WebDriverConfig.BASE_URL
+import static org.testatoo.core.Testatoo.*
 
 /**
  * @author David Avenante (d.avenante@gmail.com)

@@ -18,6 +18,7 @@ package org.testatoo.bundle.html5.list
 import org.testatoo.core.By
 import org.testatoo.core.CssIdentifier
 import org.testatoo.core.component.Group
+
 import static org.testatoo.core.Testatoo.config
 
 /**

@@ -19,6 +19,7 @@ import org.testatoo.bundle.html5.helper.RangeHelper
 import org.testatoo.core.ComponentException
 import org.testatoo.core.CssIdentifier
 import org.testatoo.core.component.field.NumberField
+
 import static org.testatoo.core.Testatoo.config
 
 /**

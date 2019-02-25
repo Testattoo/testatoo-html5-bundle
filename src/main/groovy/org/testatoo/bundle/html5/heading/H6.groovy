@@ -17,6 +17,7 @@ package org.testatoo.bundle.html5.heading
 
 import org.testatoo.core.CssIdentifier
 import org.testatoo.core.component.Heading
+
 import static org.testatoo.core.Testatoo.config
 
 /**
