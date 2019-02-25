@@ -15,14 +15,13 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.testatoo</groupId>
   <artifactId>testatoo-html5-bundle</artifactId>
-  <version>1.0.b4-SNAPSHOT</version>
+  <version>1.0.b4</version>
   <packaging>jar</packaging>
 
   <name>Testatoo html5 bundle</name>
@@ -35,7 +34,7 @@
     <connection>scm:git:git@github.com:Testatoo/testatoo-html5-bundle.git</connection>
     <developerConnection>scm:git:git@github.com:Testatoo/testatoo-html5-bundle.git</developerConnection>
     <url>http://github.com/Testatoo/testatoo-html5-bundle</url>
-    <tag>HEAD</tag>
+    <tag>1.0.b4</tag>
   </scm>
 
   <properties>
@@ -105,17 +104,17 @@
         <groupId>org.codehaus.gmavenplus</groupId>
         <artifactId>gmavenplus-plugin</artifactId>
         <version>${gmavenplus-plugin.version}</version>
-        <configuration>
-          <verbose>true</verbose>
-          <invokeDynamic>false</invokeDynamic>
-        </configuration>
         <executions>
           <execution>
             <goals>
               <goal>addSources</goal>
               <goal>addTestSources</goal>
+              <goal>generateStubs</goal>
               <goal>compile</goal>
+              <goal>generateTestStubs</goal>
               <goal>compileTests</goal>
+              <goal>removeStubs</goal>
+              <goal>removeTestStubs</goal>
             </goals>
           </execution>
           <execution>
